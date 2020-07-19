@@ -12,6 +12,32 @@ var vue1 = new Vue ({
         yahoo: 'https://tw.yahoo.com/',
         show: true,
         hidden: false,
-        activity: true
+        activity: true,
+        range: 5,
+        testArray: [
+            {
+                text: "YAHOO",
+                web:"https://tw.yahoo.com/"
+            },
+            {
+                text: "GOOGLE",
+                web:"https://www.google.com/"
+            }
+        ],
+        toggle: false,
+        textContent2: '123',
+        count:0,
+        name:'',
+    },
+    methods: {
+        show2: function() {
+            this.textContent2 = '點到了標題二';
+        },
+        add: function() {
+            this.count++;
+        },
+        sub: function() {
+            this.count--;
+        }
     }
 })

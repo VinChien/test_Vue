@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習 Vue</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <h1>▼定義渲染區域▼</h1>
     <div id="vue1">
@@ -29,11 +31,37 @@
         <h2>活動特價</h2>
         <p v-if="activity">活動進行中</p>
         <p v-else="activity">活動已結束</p>
+
+        <a href="" v-for=" i in range">第 {{i}} 連結<br></a>
+
+        <!-- v-bind => : -->
+        <a :href="i.web" v-for="i in testArray">{{i.text}}<br></a>
+
+        <h2 v-on:click="show2">我是標題二{{textContent2}}</h2>
+
+        <!-- toggle calss -->
+        <div class="box" v-bind:class="{'on':toggle}"></div>
+        <button type="button" v-on:click="toggle = !toggle"> Rotate the box</button>
+
+        <h2>
+            啤酒 {{count}} 箱
+            <!-- v-on:click => @ -->
+            <button @click="add"> + </button>
+            <button @click="sub"> - </button>
+        </h2>
+
+        <label >請輸入姓名</label>
+        <input type="text" v-model="name">
+        <p>你的姓名:{{ name }}</p>
+
+
     </div>
-    
+
+
 
     <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
