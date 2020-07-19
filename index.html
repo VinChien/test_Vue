@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習 Vue</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>▼定義渲染區域▼</h1>
+    <div id="vue1">
+        {{textContent}}<br>
+        {{textContent + a + b}}<br>
+        {{a + b}}<br>
+
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds
+            to see my dynamically bound title!
+        </span><br>
+
+        <a v-bind:href="yahoo" target="_blank">YAHOO網站</a>
+
+        <p v-if="show">True 會顯示</p>
+        <p v-if="hidden">False 會隱藏</p>
+
+        <p v-show="show">True 會顯示</p>
+        <p v-show="hidden">False 會隱藏</p>
+
+        <h2>活動特價</h2>
+        <p v-if="activity">活動進行中</p>
+        <p v-else="activity">活動已結束</p>
+    </div>
+    
+
+    <!-- Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
