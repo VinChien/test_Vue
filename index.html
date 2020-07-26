@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div id="vue2">
+        <navbar></navbar>
+    </div>
+
     <h1>▼定義渲染區域▼</h1>
     <div id="vue1">
         {{textContent}}<br>
@@ -50,11 +54,14 @@
             <button @click="sub"> - </button>
         </h2>
 
-        <label >請輸入姓名</label>
+        <label>請輸入姓名</label>
         <input type="text" v-model="name">
         <p>你的姓名:{{ name }}</p>
+    </div>
 
-
+    <div id="vue3">
+        <test-a></test-a>
+        <test-b></test-b>
     </div>
 
 

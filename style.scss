@@ -4,3 +4,18 @@
     box-sizing: border-box;
     font-family: 微軟正黑體;
 }
+
+#vue2 nav {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+
+    a {
+        color: #252525;
+        text-decoration: none;
+        &:hover {
+            transition: 0.3s;
+            font-size: 120%;
+        }
+    }
+}
